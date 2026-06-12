@@ -3,24 +3,24 @@
   "book": "Data Engineering Design Patterns — Bartosz Konieczny (O'Reilly, 2025)",
   "corpus": "../Data Engineering Design Patterns/",
   "author_repo": "https://github.com/bartosz25/data-engineering-design-patterns-book",
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "git": {
-    "initialized": false,
+    "initialized": true,
     "remote": null,
     "last_local_sha": null,
     "pushes": []
   },
   "stats": {
     "total_concepts": 28,
-    "todo": 28,
-    "building": 0,
-    "verified": 0,
+    "todo": 26,
+    "building": 1,
+    "verified": 1,
     "committed": 0,
     "pushed": 0
   },
   "concepts": [
-    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
-    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "verified", "commit_sha": null, "verified_at": "2026-06-12", "pushed_at": null },
+    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "building", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "change-data-capture", "name": "Change Data Capture", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "passthrough-replicator", "name": "Passthrough Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "transformation-replicator", "name": "Transformation Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },

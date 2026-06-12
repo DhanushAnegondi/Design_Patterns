@@ -1,0 +1,501 @@
+device_id,device_type,browser,os,manufacturer,screen_resolution
+DV00001,tablet,Chrome,Windows,Lenovo,1366x768
+DV00002,desktop,Firefox,Windows,Samsung,390x844
+DV00003,mobile,Chrome,Windows,Samsung,1366x768
+DV00004,desktop,Opera,iOS,Apple,390x844
+DV00005,desktop,Samsung Internet,iOS,Xiaomi,1366x768
+DV00006,mobile,Opera,Linux,Apple,768x1024
+DV00007,desktop,Samsung Internet,Android,Google,2560x1440
+DV00008,desktop,Firefox,Linux,Samsung,1920x1080
+DV00009,mobile,Chrome,Linux,Google,390x844
+DV00010,mobile,Chrome,Android,Samsung,1440x900
+DV00011,desktop,Opera,Linux,Google,390x844
+DV00012,desktop,Samsung Internet,Windows,Apple,412x915
+DV00013,desktop,Safari,Windows,HP,768x1024
+DV00014,desktop,Edge,Linux,Asus,412x915
+DV00015,mobile,Firefox,Linux,Google,1366x768
+DV00016,tablet,Safari,Windows,Dell,390x844
+DV00017,tablet,Firefox,macOS,Asus,1440x900
+DV00018,mobile,Samsung Internet,iOS,HP,412x915
+DV00019,mobile,Chrome,macOS,Apple,768x1024
+DV00020,mobile,Edge,Linux,Samsung,1366x768
+DV00021,tablet,Samsung Internet,Linux,HP,412x915
+DV00022,mobile,Edge,Android,Dell,2560x1440
+DV00023,desktop,Firefox,iOS,Lenovo,412x915
+DV00024,tablet,Edge,iOS,Xiaomi,2560x1440
+DV00025,desktop,Firefox,iOS,Asus,1920x1080
+DV00026,desktop,Chrome,macOS,Dell,768x1024
+DV00027,tablet,Edge,iOS,Samsung,1440x900
+DV00028,mobile,Opera,Android,Lenovo,390x844
+DV00029,desktop,Samsung Internet,Windows,Lenovo,768x1024
+DV00030,tablet,Safari,Windows,Lenovo,1440x900
+DV00031,desktop,Edge,Windows,Lenovo,390x844
+DV00032,desktop,Opera,Windows,Lenovo,768x1024
+DV00033,tablet,Opera,iOS,HP,1366x768
+DV00034,mobile,Firefox,iOS,Apple,390x844
+DV00035,mobile,Edge,Windows,Samsung,2560x1440
+DV00036,mobile,Firefox,Windows,HP,390x844
+DV00037,desktop,Chrome,Android,Samsung,768x1024
+DV00038,tablet,Firefox,macOS,Asus,390x844
+DV00039,desktop,Safari,iOS,Xiaomi,1366x768
+DV00040,tablet,Samsung Internet,macOS,Lenovo,1440x900
+DV00041,tablet,Samsung Internet,Linux,Asus,390x844
+DV00042,mobile,Chrome,macOS,HP,1920x1080
+DV00043,mobile,Chrome,iOS,HP,390x844
+DV00044,desktop,Chrome,Windows,Apple,1366x768
+DV00045,desktop,Chrome,Linux,Samsung,390x844
+DV00046,desktop,Safari,Android,HP,390x844
+DV00047,desktop,Samsung Internet,iOS,Asus,1366x768
+DV00048,mobile,Edge,macOS,Samsung,1920x1080
+DV00049,tablet,Edge,Linux,Xiaomi,1440x900
+DV00050,mobile,Samsung Internet,Windows,Samsung,1920x1080
+DV00051,mobile,Samsung Internet,Linux,Samsung,1366x768
+DV00052,desktop,Firefox,iOS,Asus,1366x768
+DV00053,mobile,Firefox,Linux,Asus,1366x768
+DV00054,desktop,Edge,iOS,Samsung,1920x1080
+DV00055,tablet,Opera,Windows,Samsung,768x1024
+DV00056,desktop,Firefox,Android,Asus,1440x900
+DV00057,desktop,Edge,Windows,Dell,1440x900
+DV00058,desktop,Edge,Linux,Asus,2560x1440
+DV00059,mobile,Samsung Internet,iOS,Asus,1366x768
+DV00060,desktop,Safari,macOS,Apple,390x844
+DV00061,tablet,Opera,Windows,Google,1920x1080
+DV00062,desktop,Opera,Android,Dell,1920x1080
+DV00063,tablet,Chrome,macOS,Samsung,390x844
+DV00064,desktop,Samsung Internet,macOS,Xiaomi,1920x1080
+DV00065,tablet,Firefox,iOS,Apple,390x844
+DV00066,desktop,Edge,iOS,Google,2560x1440
+DV00067,desktop,Samsung Internet,Linux,HP,2560x1440
+DV00068,mobile,Firefox,Linux,Asus,2560x1440
+DV00069,desktop,Chrome,Android,Samsung,1920x1080
+DV00070,tablet,Firefox,iOS,Lenovo,1366x768
+DV00071,mobile,Chrome,macOS,Google,2560x1440
+DV00072,desktop,Edge,iOS,Lenovo,390x844
+DV00073,tablet,Opera,Windows,Lenovo,412x915
+DV00074,desktop,Firefox,Linux,Samsung,1920x1080
+DV00075,tablet,Opera,macOS,Lenovo,2560x1440
+DV00076,tablet,Firefox,Linux,HP,412x915
+DV00077,tablet,Safari,iOS,Asus,2560x1440
+DV00078,desktop,Chrome,Android,Lenovo,1920x1080
+DV00079,desktop,Safari,macOS,Lenovo,1366x768
+DV00080,tablet,Edge,iOS,Xiaomi,390x844
+DV00081,desktop,Chrome,Windows,Dell,390x844
+DV00082,desktop,Safari,iOS,Dell,1440x900
+DV00083,desktop,Chrome,Linux,Google,768x1024
+DV00084,desktop,Safari,macOS,HP,412x915
+DV00085,desktop,Safari,iOS,Xiaomi,390x844
+DV00086,tablet,Firefox,macOS,Dell,768x1024
+DV00087,desktop,Edge,Windows,Dell,412x915
+DV00088,mobile,Edge,macOS,Lenovo,1366x768
+DV00089,tablet,Chrome,Android,Apple,768x1024
+DV00090,mobile,Firefox,macOS,Asus,2560x1440
+DV00091,mobile,Firefox,macOS,Apple,412x915
+DV00092,desktop,Edge,Linux,Lenovo,768x1024
+DV00093,desktop,Safari,Linux,Xiaomi,412x915
+DV00094,tablet,Safari,Windows,Samsung,2560x1440
+DV00095,desktop,Opera,Linux,Apple,1920x1080
+DV00096,tablet,Edge,Linux,Google,1440x900
+DV00097,tablet,Opera,Windows,Xiaomi,390x844
+DV00098,desktop,Safari,Windows,Xiaomi,1920x1080
+DV00099,tablet,Opera,macOS,Google,1440x900
+DV00100,desktop,Samsung Internet,Linux,Google,412x915
+DV00101,desktop,Samsung Internet,Linux,Lenovo,412x915
+DV00102,mobile,Safari,Android,Lenovo,390x844
+DV00103,desktop,Firefox,Android,Xiaomi,412x915
+DV00104,tablet,Firefox,iOS,Lenovo,1440x900
+DV00105,tablet,Chrome,Linux,Lenovo,1366x768
+DV00106,mobile,Opera,iOS,Google,1440x900
+DV00107,mobile,Edge,macOS,Asus,768x1024
+DV00108,tablet,Firefox,Windows,Lenovo,390x844
+DV00109,tablet,Samsung Internet,iOS,Google,1920x1080
+DV00110,desktop,Samsung Internet,Linux,HP,768x1024
+DV00111,desktop,Firefox,Windows,Apple,1366x768
+DV00112,mobile,Opera,Windows,Asus,1440x900
+DV00113,tablet,Opera,macOS,Xiaomi,1440x900
+DV00114,mobile,Firefox,macOS,Apple,768x1024
+DV00115,desktop,Edge,macOS,Dell,768x1024
+DV00116,tablet,Opera,Android,Apple,390x844
+DV00117,desktop,Chrome,Android,Dell,768x1024
+DV00118,mobile,Samsung Internet,iOS,Google,768x1024
+DV00119,mobile,Opera,iOS,Xiaomi,768x1024
+DV00120,tablet,Edge,macOS,Asus,1440x900
+DV00121,mobile,Firefox,Linux,Asus,412x915
+DV00122,desktop,Safari,Android,Samsung,412x915
+DV00123,mobile,Firefox,Linux,Google,2560x1440
+DV00124,tablet,Chrome,macOS,Dell,1366x768
+DV00125,mobile,Samsung Internet,macOS,HP,1920x1080
+DV00126,mobile,Edge,Linux,Asus,1440x900
+DV00127,desktop,Firefox,Android,Xiaomi,768x1024
+DV00128,tablet,Samsung Internet,Windows,Xiaomi,1440x900
+DV00129,desktop,Safari,Linux,Xiaomi,768x1024
+DV00130,mobile,Opera,iOS,HP,1440x900
+DV00131,desktop,Safari,Android,Asus,1920x1080
+DV00132,mobile,Safari,Android,Dell,768x1024
+DV00133,mobile,Firefox,iOS,Apple,1440x900
+DV00134,tablet,Opera,Windows,Samsung,412x915
+DV00135,mobile,Firefox,Android,Dell,1920x1080
+DV00136,mobile,Edge,Linux,HP,1440x900
+DV00137,mobile,Safari,Android,Lenovo,768x1024
+DV00138,mobile,Safari,Windows,Asus,1920x1080
+DV00139,tablet,Opera,Windows,Google,1366x768
+DV00140,tablet,Chrome,Windows,Apple,1366x768
+DV00141,desktop,Chrome,iOS,Dell,1366x768
+DV00142,desktop,Edge,Windows,HP,1440x900
+DV00143,tablet,Safari,Linux,Dell,390x844
+DV00144,tablet,Samsung Internet,Windows,Dell,2560x1440
+DV00145,desktop,Opera,Windows,Lenovo,390x844
+DV00146,tablet,Edge,Android,HP,1920x1080
+DV00147,tablet,Samsung Internet,macOS,Samsung,412x915
+DV00148,mobile,Samsung Internet,iOS,Samsung,768x1024
+DV00149,tablet,Chrome,Linux,Xiaomi,412x915
+DV00150,mobile,Chrome,iOS,Google,1920x1080
+DV00151,mobile,Edge,Windows,Xiaomi,2560x1440
+DV00152,tablet,Edge,macOS,Xiaomi,1366x768
+DV00153,tablet,Opera,Linux,Asus,1440x900
+DV00154,mobile,Samsung Internet,iOS,Lenovo,2560x1440
+DV00155,desktop,Chrome,Linux,Asus,1366x768
+DV00156,mobile,Opera,iOS,Xiaomi,2560x1440
+DV00157,desktop,Edge,Linux,Dell,1440x900
+DV00158,desktop,Safari,Linux,Google,2560x1440
+DV00159,tablet,Samsung Internet,Linux,Apple,390x844
+DV00160,desktop,Chrome,macOS,Xiaomi,1440x900
+DV00161,tablet,Firefox,Android,Asus,1440x900
+DV00162,desktop,Chrome,Linux,HP,1440x900
+DV00163,tablet,Firefox,Linux,Google,1440x900
+DV00164,tablet,Opera,Linux,Xiaomi,412x915
+DV00165,tablet,Safari,Linux,Asus,2560x1440
+DV00166,mobile,Safari,macOS,Samsung,412x915
+DV00167,desktop,Safari,Windows,Dell,1366x768
+DV00168,desktop,Samsung Internet,Android,Lenovo,412x915
+DV00169,tablet,Opera,iOS,Lenovo,1920x1080
+DV00170,desktop,Safari,macOS,Google,1366x768
+DV00171,mobile,Chrome,iOS,Dell,2560x1440
+DV00172,desktop,Chrome,iOS,Lenovo,412x915
+DV00173,desktop,Samsung Internet,Android,Samsung,768x1024
+DV00174,desktop,Opera,Linux,Asus,1440x900
+DV00175,mobile,Safari,macOS,Apple,2560x1440
+DV00176,mobile,Chrome,Windows,Xiaomi,1440x900
+DV00177,desktop,Opera,Windows,Dell,1366x768
+DV00178,tablet,Safari,Windows,HP,1920x1080
+DV00179,tablet,Edge,iOS,HP,768x1024
+DV00180,tablet,Edge,Android,Asus,2560x1440
+DV00181,tablet,Edge,Linux,Apple,390x844
+DV00182,tablet,Chrome,macOS,HP,2560x1440
+DV00183,tablet,Chrome,macOS,HP,1366x768
+DV00184,tablet,Chrome,macOS,Apple,1440x900
+DV00185,mobile,Samsung Internet,iOS,Asus,2560x1440
+DV00186,desktop,Firefox,Linux,Lenovo,412x915
+DV00187,mobile,Chrome,macOS,Lenovo,768x1024
+DV00188,tablet,Opera,macOS,Xiaomi,1920x1080
+DV00189,tablet,Firefox,macOS,Lenovo,768x1024
+DV00190,desktop,Chrome,Windows,Dell,768x1024
+DV00191,mobile,Opera,iOS,Lenovo,1440x900
+DV00192,desktop,Edge,Linux,Xiaomi,2560x1440
+DV00193,tablet,Opera,Android,Asus,1920x1080
+DV00194,tablet,Chrome,Android,Google,390x844
+DV00195,mobile,Chrome,Windows,HP,412x915
+DV00196,tablet,Opera,Windows,Lenovo,390x844
+DV00197,desktop,Firefox,Android,Asus,2560x1440
+DV00198,desktop,Opera,Android,Asus,1920x1080
+DV00199,mobile,Safari,Android,Google,2560x1440
+DV00200,tablet,Chrome,macOS,Google,1440x900
+DV00201,tablet,Edge,Linux,Xiaomi,768x1024
+DV00202,tablet,Chrome,Android,Samsung,2560x1440
+DV00203,mobile,Safari,Windows,Xiaomi,768x1024
+DV00204,tablet,Chrome,iOS,Asus,1440x900
+DV00205,desktop,Firefox,iOS,Google,390x844
+DV00206,mobile,Samsung Internet,Android,Apple,1366x768
+DV00207,mobile,Opera,macOS,Lenovo,1440x900
+DV00208,tablet,Edge,Windows,Apple,412x915
+DV00209,tablet,Firefox,macOS,Lenovo,390x844
+DV00210,desktop,Opera,Android,Samsung,1366x768
+DV00211,desktop,Edge,Windows,Dell,1440x900
+DV00212,tablet,Safari,iOS,Lenovo,1440x900
+DV00213,mobile,Edge,macOS,Asus,390x844
+DV00214,desktop,Edge,macOS,Dell,768x1024
+DV00215,desktop,Safari,Android,Google,768x1024
+DV00216,tablet,Safari,Windows,Lenovo,412x915
+DV00217,mobile,Opera,iOS,Asus,768x1024
+DV00218,desktop,Edge,iOS,Asus,2560x1440
+DV00219,mobile,Opera,iOS,Xiaomi,1440x900
+DV00220,mobile,Firefox,macOS,Xiaomi,1366x768
+DV00221,mobile,Chrome,Linux,Asus,412x915
+DV00222,mobile,Edge,macOS,Asus,1920x1080
+DV00223,desktop,Opera,iOS,Google,768x1024
+DV00224,desktop,Edge,Windows,Asus,1920x1080
+DV00225,tablet,Firefox,Android,Dell,1920x1080
+DV00226,mobile,Safari,Linux,Xiaomi,412x915
+DV00227,desktop,Safari,iOS,Xiaomi,2560x1440
+DV00228,tablet,Samsung Internet,Android,Apple,390x844
+DV00229,desktop,Firefox,Linux,HP,412x915
+DV00230,desktop,Edge,Windows,Samsung,1440x900
+DV00231,desktop,Samsung Internet,Linux,Apple,1920x1080
+DV00232,mobile,Chrome,Linux,Google,2560x1440
+DV00233,mobile,Firefox,macOS,Xiaomi,390x844
+DV00234,tablet,Firefox,macOS,Dell,1920x1080
+DV00235,tablet,Edge,iOS,HP,1440x900
+DV00236,tablet,Firefox,macOS,Asus,412x915
+DV00237,mobile,Edge,Linux,Apple,768x1024
+DV00238,mobile,Safari,iOS,Dell,1920x1080
+DV00239,mobile,Safari,iOS,Lenovo,412x915
+DV00240,mobile,Samsung Internet,Linux,Asus,768x1024
+DV00241,mobile,Firefox,Android,Asus,1920x1080
+DV00242,desktop,Edge,iOS,Google,390x844
+DV00243,mobile,Samsung Internet,Linux,Apple,768x1024
+DV00244,tablet,Edge,Linux,Apple,390x844
+DV00245,tablet,Samsung Internet,Windows,Asus,768x1024
+DV00246,mobile,Firefox,iOS,Google,1366x768
+DV00247,tablet,Firefox,iOS,Lenovo,412x915
+DV00248,tablet,Samsung Internet,macOS,Samsung,412x915
+DV00249,tablet,Chrome,Linux,Asus,1920x1080
+DV00250,tablet,Safari,macOS,Samsung,2560x1440
+DV00251,mobile,Samsung Internet,Android,Dell,1366x768
+DV00252,desktop,Opera,Linux,Lenovo,768x1024
+DV00253,desktop,Safari,Android,Lenovo,412x915
+DV00254,mobile,Chrome,Android,Samsung,1366x768
+DV00255,desktop,Samsung Internet,Android,Google,1920x1080
+DV00256,mobile,Chrome,Linux,Samsung,1440x900
+DV00257,mobile,Samsung Internet,Linux,Xiaomi,768x1024
+DV00258,tablet,Safari,Windows,HP,1440x900
+DV00259,desktop,Opera,iOS,Google,390x844
+DV00260,desktop,Samsung Internet,Windows,Asus,412x915
+DV00261,mobile,Samsung Internet,Android,Samsung,1366x768
+DV00262,desktop,Chrome,Linux,Asus,1920x1080
+DV00263,desktop,Firefox,iOS,Dell,1440x900
+DV00264,mobile,Safari,iOS,Xiaomi,390x844
+DV00265,tablet,Samsung Internet,macOS,Xiaomi,412x915
+DV00266,desktop,Edge,iOS,Xiaomi,2560x1440
+DV00267,desktop,Samsung Internet,Linux,HP,1440x900
+DV00268,mobile,Firefox,Linux,Samsung,412x915
+DV00269,mobile,Opera,Linux,Apple,1440x900
+DV00270,mobile,Firefox,Windows,Asus,1920x1080
+DV00271,tablet,Firefox,iOS,Apple,1920x1080
+DV00272,mobile,Firefox,macOS,HP,1920x1080
+DV00273,tablet,Firefox,iOS,HP,768x1024
+DV00274,desktop,Safari,macOS,Apple,2560x1440
+DV00275,desktop,Firefox,iOS,Lenovo,768x1024
+DV00276,desktop,Chrome,Windows,Dell,1920x1080
+DV00277,mobile,Firefox,iOS,Google,1920x1080
+DV00278,desktop,Safari,Windows,Dell,412x915
+DV00279,mobile,Opera,Windows,Samsung,1440x900
+DV00280,mobile,Safari,iOS,Samsung,1440x900
+DV00281,tablet,Firefox,iOS,Apple,412x915
+DV00282,tablet,Opera,Linux,Asus,412x915
+DV00283,desktop,Chrome,Android,Xiaomi,1440x900
+DV00284,tablet,Chrome,Android,Asus,1920x1080
+DV00285,desktop,Safari,iOS,Dell,1920x1080
+DV00286,desktop,Safari,iOS,Google,1440x900
+DV00287,tablet,Opera,Linux,Asus,390x844
+DV00288,tablet,Edge,Windows,Samsung,768x1024
+DV00289,tablet,Samsung Internet,iOS,HP,1440x900
+DV00290,mobile,Firefox,Android,Google,768x1024
+DV00291,mobile,Edge,Android,Samsung,2560x1440
+DV00292,mobile,Safari,Linux,Google,1366x768
+DV00293,tablet,Edge,Windows,Samsung,768x1024
+DV00294,desktop,Chrome,Android,Samsung,412x915
+DV00295,tablet,Safari,macOS,Apple,390x844
+DV00296,tablet,Opera,Linux,Samsung,1440x900
+DV00297,mobile,Samsung Internet,Android,Apple,2560x1440
+DV00298,tablet,Safari,Linux,Samsung,390x844
+DV00299,tablet,Firefox,macOS,Asus,1366x768
+DV00300,desktop,Safari,iOS,Google,1920x1080
+DV00301,mobile,Opera,macOS,Xiaomi,768x1024
+DV00302,tablet,Opera,iOS,Apple,390x844
+DV00303,tablet,Samsung Internet,Linux,Apple,1366x768
+DV00304,mobile,Samsung Internet,Linux,Google,2560x1440
+DV00305,desktop,Firefox,macOS,Xiaomi,1920x1080
+DV00306,desktop,Samsung Internet,Windows,Samsung,412x915
+DV00307,tablet,Firefox,Android,Xiaomi,1440x900
+DV00308,mobile,Firefox,Linux,Lenovo,412x915
+DV00309,mobile,Opera,iOS,Samsung,1920x1080
+DV00310,desktop,Firefox,iOS,Apple,412x915
+DV00311,desktop,Safari,Android,Xiaomi,1440x900
+DV00312,tablet,Edge,Android,Lenovo,1366x768
+DV00313,tablet,Chrome,Linux,Xiaomi,1920x1080
+DV00314,mobile,Samsung Internet,iOS,Asus,390x844
+DV00315,tablet,Safari,Windows,HP,1440x900
+DV00316,tablet,Chrome,Windows,HP,2560x1440
+DV00317,desktop,Firefox,Linux,Lenovo,2560x1440
+DV00318,desktop,Chrome,Android,Xiaomi,1366x768
+DV00319,desktop,Edge,iOS,HP,390x844
+DV00320,tablet,Samsung Internet,Linux,Samsung,1440x900
+DV00321,tablet,Chrome,Android,Apple,1440x900
+DV00322,desktop,Safari,iOS,Xiaomi,390x844
+DV00323,mobile,Samsung Internet,Android,Lenovo,1920x1080
+DV00324,mobile,Chrome,Linux,Dell,768x1024
+DV00325,tablet,Edge,Linux,Samsung,1440x900
+DV00326,desktop,Firefox,Android,Xiaomi,390x844
+DV00327,desktop,Edge,Linux,Google,1366x768
+DV00328,mobile,Firefox,Windows,Samsung,390x844
+DV00329,tablet,Firefox,Linux,Google,412x915
+DV00330,tablet,Firefox,macOS,Samsung,1366x768
+DV00331,mobile,Firefox,macOS,Dell,768x1024
+DV00332,tablet,Chrome,macOS,Asus,1440x900
+DV00333,tablet,Opera,Android,Google,768x1024
+DV00334,tablet,Safari,macOS,Asus,1920x1080
+DV00335,mobile,Edge,Linux,Lenovo,390x844
+DV00336,desktop,Safari,iOS,Samsung,2560x1440
+DV00337,mobile,Edge,Windows,Apple,2560x1440
+DV00338,mobile,Chrome,Windows,Xiaomi,1440x900
+DV00339,tablet,Opera,Windows,Asus,768x1024
+DV00340,tablet,Samsung Internet,macOS,Google,390x844
+DV00341,mobile,Opera,macOS,Apple,1440x900
+DV00342,desktop,Safari,Windows,Dell,1920x1080
+DV00343,desktop,Samsung Internet,Android,Asus,390x844
+DV00344,tablet,Opera,macOS,Google,2560x1440
+DV00345,mobile,Edge,Android,Google,412x915
+DV00346,tablet,Chrome,Linux,Samsung,2560x1440
+DV00347,desktop,Opera,Android,Lenovo,2560x1440
+DV00348,tablet,Samsung Internet,iOS,Dell,2560x1440
+DV00349,desktop,Opera,macOS,Google,2560x1440
+DV00350,tablet,Samsung Internet,Android,Dell,390x844
+DV00351,tablet,Chrome,Linux,Xiaomi,412x915
+DV00352,mobile,Firefox,iOS,Samsung,412x915
+DV00353,tablet,Edge,iOS,Google,1920x1080
+DV00354,mobile,Safari,macOS,HP,2560x1440
+DV00355,mobile,Firefox,macOS,Dell,1366x768
+DV00356,desktop,Safari,Windows,Apple,412x915
+DV00357,mobile,Opera,macOS,Xiaomi,1366x768
+DV00358,desktop,Firefox,iOS,Dell,412x915
+DV00359,mobile,Chrome,Android,Google,412x915
+DV00360,tablet,Firefox,Android,Lenovo,768x1024
+DV00361,tablet,Edge,macOS,HP,2560x1440
+DV00362,mobile,Firefox,Linux,Asus,1440x900
+DV00363,mobile,Edge,iOS,Xiaomi,1366x768
+DV00364,desktop,Opera,macOS,Lenovo,1920x1080
+DV00365,tablet,Edge,Linux,Samsung,412x915
+DV00366,tablet,Chrome,Linux,Samsung,768x1024
+DV00367,desktop,Safari,Android,Dell,768x1024
+DV00368,mobile,Chrome,macOS,Asus,2560x1440
+DV00369,desktop,Edge,Windows,Xiaomi,390x844
+DV00370,mobile,Firefox,Android,Samsung,2560x1440
+DV00371,desktop,Chrome,Linux,Samsung,768x1024
+DV00372,tablet,Samsung Internet,Linux,Dell,1366x768
+DV00373,desktop,Safari,Android,Dell,768x1024
+DV00374,tablet,Edge,Android,Apple,1920x1080
+DV00375,desktop,Safari,macOS,Dell,390x844
+DV00376,tablet,Opera,iOS,Xiaomi,1920x1080
+DV00377,mobile,Firefox,Linux,Samsung,1920x1080
+DV00378,desktop,Edge,iOS,Asus,1920x1080
+DV00379,desktop,Edge,iOS,Apple,412x915
+DV00380,tablet,Opera,macOS,Dell,2560x1440
+DV00381,mobile,Chrome,iOS,Google,1366x768
+DV00382,tablet,Edge,macOS,Samsung,390x844
+DV00383,mobile,Chrome,iOS,Apple,1440x900
+DV00384,mobile,Chrome,Android,Google,2560x1440
+DV00385,tablet,Chrome,Linux,Samsung,2560x1440
+DV00386,desktop,Samsung Internet,Windows,Google,1366x768
+DV00387,desktop,Safari,iOS,Google,768x1024
+DV00388,tablet,Firefox,Android,Asus,412x915
+DV00389,desktop,Firefox,Windows,Asus,1920x1080
+DV00390,mobile,Firefox,Windows,HP,1920x1080
+DV00391,mobile,Safari,iOS,Xiaomi,768x1024
+DV00392,tablet,Edge,Linux,Apple,768x1024
+DV00393,tablet,Firefox,Linux,Google,768x1024
+DV00394,desktop,Samsung Internet,Linux,Lenovo,1920x1080
+DV00395,mobile,Edge,Android,Asus,1440x900
+DV00396,mobile,Firefox,Android,Asus,2560x1440
+DV00397,tablet,Safari,Windows,Xiaomi,1920x1080
+DV00398,mobile,Opera,macOS,Lenovo,2560x1440
+DV00399,desktop,Chrome,Linux,Lenovo,2560x1440
+DV00400,mobile,Opera,Android,Dell,412x915
+DV00401,mobile,Safari,Android,Apple,412x915
+DV00402,mobile,Opera,Android,Lenovo,412x915
+DV00403,desktop,Chrome,Android,Google,390x844
+DV00404,tablet,Samsung Internet,macOS,Apple,1366x768
+DV00405,tablet,Samsung Internet,Android,Apple,1366x768
+DV00406,desktop,Firefox,Linux,Google,1440x900
+DV00407,tablet,Chrome,iOS,Dell,412x915
+DV00408,mobile,Safari,Linux,Asus,768x1024
+DV00409,desktop,Opera,macOS,Google,1440x900
+DV00410,mobile,Samsung Internet,Linux,HP,1920x1080
+DV00411,desktop,Samsung Internet,macOS,Asus,390x844
+DV00412,mobile,Opera,Windows,Lenovo,768x1024
+DV00413,mobile,Samsung Internet,Android,HP,390x844
+DV00414,mobile,Samsung Internet,Android,HP,1920x1080
+DV00415,desktop,Chrome,Android,Dell,412x915
+DV00416,mobile,Chrome,Linux,Google,412x915
+DV00417,desktop,Opera,iOS,Lenovo,2560x1440
+DV00418,desktop,Samsung Internet,macOS,Google,390x844
+DV00419,desktop,Chrome,macOS,Dell,1366x768
+DV00420,mobile,Chrome,Linux,Google,1440x900
+DV00421,tablet,Firefox,iOS,Samsung,1920x1080
+DV00422,mobile,Edge,Android,Xiaomi,768x1024
+DV00423,mobile,Opera,Windows,Dell,2560x1440
+DV00424,tablet,Chrome,Android,Asus,412x915
+DV00425,tablet,Safari,macOS,Dell,768x1024
+DV00426,desktop,Edge,iOS,Apple,768x1024
+DV00427,desktop,Opera,macOS,Lenovo,1366x768
+DV00428,desktop,Safari,macOS,Google,390x844
+DV00429,mobile,Chrome,Linux,HP,412x915
+DV00430,tablet,Safari,macOS,Lenovo,390x844
+DV00431,tablet,Chrome,iOS,Dell,390x844
+DV00432,tablet,Firefox,macOS,Google,768x1024
+DV00433,tablet,Chrome,Windows,Samsung,1920x1080
+DV00434,tablet,Opera,Linux,HP,768x1024
+DV00435,tablet,Edge,iOS,Apple,1440x900
+DV00436,tablet,Opera,Linux,Lenovo,1440x900
+DV00437,desktop,Samsung Internet,Android,Lenovo,1440x900
+DV00438,desktop,Samsung Internet,Windows,Dell,1440x900
+DV00439,mobile,Edge,Android,HP,2560x1440
+DV00440,tablet,Firefox,Linux,Google,412x915
+DV00441,mobile,Edge,macOS,Google,390x844
+DV00442,tablet,Chrome,Linux,HP,1440x900
+DV00443,desktop,Safari,Android,HP,1366x768
+DV00444,desktop,Chrome,Linux,Xiaomi,768x1024
+DV00445,tablet,Edge,macOS,Dell,768x1024
+DV00446,mobile,Opera,Linux,HP,768x1024
+DV00447,desktop,Edge,iOS,Asus,1440x900
+DV00448,mobile,Edge,Windows,Samsung,1440x900
+DV00449,tablet,Edge,macOS,HP,390x844
+DV00450,mobile,Chrome,Windows,Lenovo,1440x900
+DV00451,tablet,Samsung Internet,Android,Lenovo,390x844
+DV00452,desktop,Chrome,Android,Dell,2560x1440
+DV00453,tablet,Safari,Android,Google,1920x1080
+DV00454,mobile,Chrome,iOS,HP,2560x1440
+DV00455,tablet,Safari,Windows,Xiaomi,390x844
+DV00456,mobile,Opera,Linux,Samsung,1366x768
+DV00457,desktop,Edge,Linux,Google,390x844
+DV00458,mobile,Firefox,macOS,Xiaomi,390x844
+DV00459,desktop,Chrome,Windows,Dell,412x915
+DV00460,mobile,Edge,iOS,Asus,1366x768
+DV00461,tablet,Opera,macOS,Google,390x844
+DV00462,mobile,Firefox,Android,Lenovo,390x844
+DV00463,mobile,Opera,iOS,Asus,412x915
+DV00464,tablet,Safari,Android,Apple,2560x1440
+DV00465,mobile,Samsung Internet,Windows,Xiaomi,390x844
+DV00466,mobile,Samsung Internet,Windows,Asus,2560x1440
+DV00467,tablet,Opera,iOS,HP,412x915
+DV00468,desktop,Opera,Android,Dell,390x844
+DV00469,tablet,Samsung Internet,iOS,Xiaomi,1366x768
+DV00470,tablet,Firefox,Windows,Samsung,1366x768
+DV00471,desktop,Edge,Linux,Xiaomi,1366x768
+DV00472,mobile,Samsung Internet,macOS,Xiaomi,390x844
+DV00473,tablet,Edge,Windows,Dell,390x844
+DV00474,desktop,Opera,Linux,Asus,390x844
+DV00475,mobile,Safari,macOS,Asus,390x844
+DV00476,mobile,Opera,Linux,Lenovo,390x844
+DV00477,mobile,Firefox,macOS,Lenovo,390x844
+DV00478,mobile,Firefox,Linux,Lenovo,412x915
+DV00479,desktop,Samsung Internet,Android,Google,1440x900
+DV00480,mobile,Opera,Linux,Lenovo,1920x1080
+DV00481,tablet,Samsung Internet,iOS,Xiaomi,1440x900
+DV00482,mobile,Firefox,Linux,Apple,2560x1440
+DV00483,tablet,Chrome,Linux,Asus,412x915
+DV00484,mobile,Samsung Internet,Android,HP,1366x768
+DV00485,tablet,Safari,iOS,Lenovo,1366x768
+DV00486,desktop,Opera,iOS,HP,1366x768
+DV00487,desktop,Samsung Internet,iOS,HP,412x915
+DV00488,desktop,Chrome,Windows,Xiaomi,2560x1440
+DV00489,tablet,Edge,Windows,Dell,1920x1080
+DV00490,tablet,Firefox,Android,Asus,1440x900
+DV00491,tablet,Firefox,Linux,Google,2560x1440
+DV00492,tablet,Chrome,Windows,HP,390x844
+DV00493,tablet,Samsung Internet,Windows,Dell,1440x900
+DV00494,desktop,Chrome,Android,Asus,1366x768
+DV00495,tablet,Safari,Windows,Apple,2560x1440
+DV00496,tablet,Opera,Windows,Google,2560x1440
+DV00497,mobile,Samsung Internet,iOS,Asus,1366x768
+DV00498,tablet,Edge,Linux,HP,768x1024
+DV00499,desktop,Safari,macOS,Asus,412x915
+DV00500,mobile,Samsung Internet,macOS,Apple,412x915

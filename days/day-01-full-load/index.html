@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Full Loader · Day 01 · DEDP</title>
+<style>
+  :root{
+    --bg: oklch(0.17 0.022 264);
+    --surface: oklch(0.225 0.026 264);
+    --surface-2: oklch(0.275 0.030 264);
+    --line: oklch(0.40 0.03 264);
+    --ink: oklch(0.97 0.008 264);
+    --muted: oklch(0.78 0.022 264);
+    --brand: oklch(0.80 0.13 64);
+    --brand-ink: oklch(0.22 0.05 64);
+    --safe: oklch(0.82 0.15 152);
+    --danger: oklch(0.70 0.20 26);
+    --radius: 14px;
+    --maxw: 1080px;
+    --serif: "Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text",Georgia,serif;
+    --sans: ui-sans-serif,"Segoe UI",Tahoma,system-ui,sans-serif;
+    --mono: ui-monospace,"Cascadia Code","SFMono-Regular",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--sans);line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  header.hero{
+    padding:72px 24px 40px;max-width:var(--maxw);margin:0 auto;
+  }
+  .breadcrumb{
+    font-family:var(--mono);font-size:.82rem;color:var(--muted);margin:0 0 16px;
+  }
+  .breadcrumb b{color:var(--brand);font-weight:600}
+  h1{
+    font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,6vw,4rem);
+    line-height:1.04;letter-spacing:-0.02em;margin:0 0 18px;
+  }
+  h1 .accent{color:var(--brand);font-style:italic}
+  .lede{font-size:1.2rem;color:var(--muted);max-width:64ch;margin:0}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;
+  }
+  .chip{
+    font-family:var(--mono);font-size:.78rem;color:var(--ink);
+    background:var(--surface-2);border:1px solid var(--line);
+    padding:6px 12px;border-radius:999px;
+  }
+  section{padding:36px 0}
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:clamp(1.6rem,3.4vw,2.2rem);
+    letter-spacing:-0.01em;margin:0 0 6px;
+  }
+  .section-sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+  /* concept blocks */
+  .blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .block{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;
+  }
+  .block h3{
+    font-family:var(--mono);font-size:.86rem;margin:0 0 10px;color:var(--brand);
+  }
+  .block p{margin:0;color:var(--muted)}
+  .block strong{color:var(--ink);font-weight:600}
+  /* diagram */
+  .panel{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px;
+  }
+  svg{display:block;width:100%;height:auto}
+  .legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px;color:var(--muted);font-size:.9rem}
+  .legend span{display:inline-flex;align-items:center;gap:8px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  /* simulator */
+  .sim{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+  .stage{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;min-height:340px;position:relative;
+  }
+  .bucket-label{
+    font-family:var(--mono);font-size:.78rem;color:var(--muted);margin:0 0 16px;
+  }
+  .objects{display:flex;flex-direction:column;gap:10px}
+  .obj{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:var(--surface-2);border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;font-family:var(--mono);font-size:.82rem;
+    opacity:0;transform:translateY(6px);
+    transition:opacity .35s ease,transform .35s ease,border-color .35s ease,background .35s ease;
+  }
+  .obj.show{opacity:1;transform:none}
+  .obj.pointer{border-color:var(--brand);background:oklch(0.30 0.05 64)}
+  .obj .tag{color:var(--muted)}
+  .obj.current{border-color:var(--safe)}
+  .controls{display:flex;flex-direction:column;gap:16px}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  }
+  .card h3{margin:0 0 6px;font-family:var(--serif);font-size:1.2rem}
+  .card p{margin:0 0 16px;color:var(--muted);font-size:.94rem}
+  .btn{
+    appearance:none;border:1px solid var(--line);cursor:pointer;width:100%;
+    font-family:var(--sans);font-weight:600;font-size:.95rem;
+    padding:12px 16px;border-radius:10px;color:var(--ink);background:var(--surface-2);
+    transition:transform .12s ease,background .2s ease,border-color .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px);border-color:var(--brand)}
+  .btn:active{transform:none}
+  .btn.safe{background:oklch(0.30 0.06 152);border-color:var(--safe)}
+  .btn.naive{background:oklch(0.30 0.07 26);border-color:var(--danger)}
+  .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+  .readout{
+    background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px;
+    text-align:center;
+  }
+  .readout .label{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+  .readout .value{font-family:var(--serif);font-size:2.6rem;font-weight:600;line-height:1.1;margin-top:6px}
+  .readout.zero .value{color:var(--danger)}
+  .readout.ok .value{color:var(--safe)}
+  .statusline{
+    font-family:var(--mono);font-size:.82rem;color:var(--muted);min-height:1.4em;margin-top:8px
+  }
+  .statusline.danger{color:var(--danger)}
+  .statusline.safe{color:var(--safe)}
+  /* code */
+  pre{
+    background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+    overflow:auto;font-family:var(--mono);font-size:.86rem;color:var(--ink);line-height:1.55;
+  }
+  .k{color:var(--brand)}.c{color:var(--muted)}.s{color:var(--safe)}
+  footer{padding:48px 24px 64px;max-width:var(--maxw);margin:0 auto;color:var(--muted);
+    border-top:1px solid var(--line)}
+  a{color:var(--brand)}
+  @media (max-width:820px){
+    .blocks{grid-template-columns:1fr}
+    .sim{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="breadcrumb">DEDP log / Chapter 2 / <b>Day 01 · Full Loader</b></p>
+  <h1>The Full Loader, and the art of the <span class="accent">atomic swap</span></h1>
+  <p class="lede">When reference data has no "what changed" column, you reload all of it every run.
+    Computing the reload is easy. <em>Publishing</em> it without ever showing a consumer a
+    half-written dataset is the real skill, and on S3 it comes down to one pointer write.</p>
+  <div class="meta">
+    <span class="chip">pattern: Full Loader</span>
+    <span class="chip">store: Amazon S3</span>
+    <span class="chip">local: moto mock</span>
+    <span class="chip">lang: Python · boto3</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>The shape of the problem</h2>
+    <p class="section-sub">Three blocks, the way the book frames every pattern.</p>
+    <div class="blocks">
+      <div class="block">
+        <h3>Problem</h3>
+        <p>A <strong>device reference dataset</strong> from an external provider feeds the Silver
+          layer. It changes a few times a week, stays under a million rows, and ships with
+          <strong>no "last updated" column</strong>. You can't tell which rows changed, so you
+          can't load incrementally.</p>
+      </div>
+      <div class="block">
+        <h3>Solution</h3>
+        <p>Reload the <strong>entire</strong> dataset each run (extract + load). Publish it
+          <strong>atomically</strong>: write the new snapshot to an immutable version, then flip a
+          single <code>_CURRENT</code> pointer. Readers always resolve a complete version.</p>
+      </div>
+      <div class="block">
+        <h3>Consequences</h3>
+        <p>You reprocess <strong>everything</strong> every run: fine for small, slow data, costly
+          for big data. Never drop-then-insert in place, because it opens a window where consumers
+          see <strong>zero rows</strong>. Keep old versions for rollback.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How the safe load flows on S3</h2>
+    <p class="section-sub">The new snapshot lands in an immutable <code>versions/&lt;v&gt;/</code>
+      prefix that consumers aren't watching. Only when it's fully written does the pointer flip.
+      That flip is the object-store version of swapping a database view.</p>
+    <div class="panel">
+      <svg viewBox="0 0 920 320" role="img" aria-label="Diagram: source snapshot writes to an immutable version prefix, then the _CURRENT pointer flips, and the consumer reads through the pointer.">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="oklch(0.80 0.13 64)"></path>
+          </marker>
+        </defs>
+        <!-- source -->
+        <rect x="20" y="120" width="170" height="80" rx="12" fill="oklch(0.275 0.030 264)" stroke="oklch(0.40 0.03 264)"></rect>
+        <text x="105" y="150" text-anchor="middle" fill="oklch(0.97 0.008 264)" font-family="ui-monospace,monospace" font-size="14">source</text>
+        <text x="105" y="172" text-anchor="middle" fill="oklch(0.78 0.022 264)" font-family="ui-monospace,monospace" font-size="12">devices.csv (full)</text>
+        <!-- versions -->
+        <rect x="350" y="40" width="230" height="70" rx="12" fill="oklch(0.275 0.030 264)" stroke="oklch(0.40 0.03 264)"></rect>
+        <text x="465" y="68" text-anchor="middle" fill="oklch(0.97 0.008 264)" font-family="ui-monospace,monospace" font-size="13">versions/2026-06-11/</text>
+        <text x="465" y="90" text-anchor="middle" fill="oklch(0.78 0.022 264)" font-family="ui-monospace,monospace" font-size="12">immutable · 500 rows</text>
+        <rect x="350" y="130" width="230" height="70" rx="12" fill="oklch(0.275 0.030 264)" stroke="oklch(0.82 0.15 152)"></rect>
+        <text x="465" y="158" text-anchor="middle" fill="oklch(0.97 0.008 264)" font-family="ui-monospace,monospace" font-size="13">versions/2026-06-12/</text>
+        <text x="465" y="180" text-anchor="middle" fill="oklch(0.82 0.15 152)" font-family="ui-monospace,monospace" font-size="12">immutable · 520 rows</text>
+        <!-- pointer -->
+        <rect x="660" y="85" width="160" height="70" rx="12" fill="oklch(0.30 0.05 64)" stroke="oklch(0.80 0.13 64)"></rect>
+        <text x="740" y="113" text-anchor="middle" fill="oklch(0.97 0.008 264)" font-family="ui-monospace,monospace" font-size="14">_CURRENT</text>
+        <text x="740" y="135" text-anchor="middle" fill="oklch(0.80 0.13 64)" font-family="ui-monospace,monospace" font-size="12">→ 2026-06-12</text>
+        <!-- consumer -->
+        <rect x="660" y="210" width="160" height="70" rx="12" fill="oklch(0.275 0.030 264)" stroke="oklch(0.40 0.03 264)"></rect>
+        <text x="740" y="238" text-anchor="middle" fill="oklch(0.97 0.008 264)" font-family="ui-monospace,monospace" font-size="14">consumer</text>
+        <text x="740" y="260" text-anchor="middle" fill="oklch(0.78 0.022 264)" font-family="ui-monospace,monospace" font-size="12">reads via pointer</text>
+        <!-- arrows -->
+        <path d="M190,150 C260,150 280,75 350,75" fill="none" stroke="oklch(0.80 0.13 64)" stroke-width="2" marker-end="url(#arrow)"></path>
+        <path d="M190,170 C260,170 280,165 350,165" fill="none" stroke="oklch(0.80 0.13 64)" stroke-width="2" marker-end="url(#arrow)"></path>
+        <path d="M580,165 C620,165 630,120 660,120" fill="none" stroke="oklch(0.82 0.15 152)" stroke-width="2" marker-end="url(#arrow)"></path>
+        <path d="M740,210 L740,160" fill="none" stroke="oklch(0.80 0.13 64)" stroke-width="2" marker-end="url(#arrow)"></path>
+      </svg>
+      <div class="legend">
+        <span><i class="dot" style="background:oklch(0.82 0.15 152)"></i> immutable version (write target)</span>
+        <span><i class="dot" style="background:oklch(0.80 0.13 64)"></i> atomic pointer (the swap)</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Run both loaders, watch the consumer</h2>
+    <p class="section-sub">The number on the right is what a consumer reads <em>at this instant</em>.
+      Trigger each loader and watch what happens to it mid-write.</p>
+    <div class="sim">
+      <div class="stage">
+        <p class="bucket-label" id="bucketLabel">s3://silver-layer/ (empty)</p>
+        <div class="objects" id="objects"></div>
+      </div>
+      <div class="controls">
+        <div class="readout" id="readout">
+          <div class="label">consumer reads</div>
+          <div class="value" id="readValue">ready</div>
+        </div>
+        <div class="statusline" id="status">Pick a loader to begin.</div>
+        <div class="card">
+          <h3>Safe versioned load</h3>
+          <p>Write a new immutable version, then flip <code>_CURRENT</code>. The consumer never dips.</p>
+          <button class="btn safe" id="btnSafe">Run safe load →</button>
+        </div>
+        <div class="card">
+          <h3>Naive drop-then-insert</h3>
+          <p>Delete the live data, then write the new file. Watch the consumer hit zero in between.</p>
+          <button class="btn naive" id="btnNaive">Run naive load →</button>
+        </div>
+        <button class="btn" id="btnReset">Reset bucket</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The mechanism, in code</h2>
+    <p class="section-sub">The whole safety property is two ordered writes. From
+      <code>code/full_loader.py</code>.</p>
+    <pre><span class="c"># write the full snapshot to an immutable location nobody is reading yet</span>
+self.s3.put_object(Bucket=bucket, Key=<span class="s">f"{prefix}/versions/{version}/data.csv"</span>, Body=csv_bytes)
+
+<span class="c"># then publish it with ONE atomic pointer write — this is the "view swap"</span>
+self.s3.put_object(Bucket=bucket, Key=<span class="s">f"{prefix}/_CURRENT"</span>, Body=version.encode())
+
+<span class="c"># a reader always resolves _CURRENT first, so it only ever sees a COMPLETE version</span>
+<span class="k">def</span> read_current_count(self):
+    version = self.current_version()
+    obj = self.s3.get_object(Bucket=bucket, Key=<span class="s">f"{prefix}/versions/{version}/data.csv"</span>)
+    <span class="k">return</span> count_rows(obj[<span class="s">"Body"</span>].read())</pre>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p><strong>Day 01 of the DEDP learning log.</strong> Pattern: Full Loader (Chapter 2).
+  Run <code>python code/run.py</code> for the verified end-to-end demo. Reference implementation by
+  the book's author uses Spark + Airflow + PostgreSQL; this is the S3 object-store version of the
+  same idea.</p>
+</footer>
+
+<script>
+(function(){
+  const objectsEl = document.getElementById('objects');
+  const bucketLabel = document.getElementById('bucketLabel');
+  const readValue = document.getElementById('readValue');
+  const readout = document.getElementById('readout');
+  const status = document.getElementById('status');
+  const btnSafe = document.getElementById('btnSafe');
+  const btnNaive = document.getElementById('btnNaive');
+  const btnReset = document.getElementById('btnReset');
+
+  const SNAP1 = 500, SNAP2 = 520;
+  let busy = false;
+
+  function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
+
+  function setRead(n, state){
+    readValue.textContent = (n===null) ? 'ready' : (n + ' rows');
+    readout.className = 'readout' + (state ? ' '+state : '');
+  }
+  function setStatus(msg, cls){
+    status.textContent = msg;
+    status.className = 'statusline' + (cls ? ' '+cls : '');
+  }
+  function clearObjects(){ objectsEl.innerHTML=''; }
+
+  function addObject(id, label, tag, cls){
+    const row = document.createElement('div');
+    row.className = 'obj ' + (cls||'');
+    row.id = id;
+    row.innerHTML = '<span>'+label+'</span><span class="tag">'+tag+'</span>';
+    objectsEl.appendChild(row);
+    requestAnimationFrame(()=>row.classList.add('show'));
+    return row;
+  }
+  function removeObject(id){
+    const el = document.getElementById(id);
+    if(el){ el.classList.remove('show'); setTimeout(()=>el.remove(),300); }
+  }
+  function setBusy(b){
+    busy=b;
+    [btnSafe,btnNaive,btnReset].forEach(x=>x.disabled=b);
+  }
+
+  function reset(){
+    clearObjects();
+    bucketLabel.textContent = 's3://silver-layer/ — empty';
+    setRead(null,null);
+    setStatus('Pick a loader to begin.');
+  }
+
+  async function runSafe(){
+    if(busy) return; setBusy(true);
+    reset();
+    bucketLabel.textContent = 's3://silver-layer/devices/safe/';
+    setStatus('Writing immutable version 2026-06-11 …');
+    addObject('v1','versions/2026-06-11/data.csv', SNAP1+' rows');
+    await sleep(700);
+    setStatus('Flipping _CURRENT → 2026-06-11 (atomic) …', 'safe');
+    addObject('ptr','_CURRENT','→ 2026-06-11','pointer');
+    await sleep(500);
+    setRead(SNAP1,'ok'); setStatus('Consumer reads a complete version. ✓','safe');
+    await sleep(900);
+
+    setStatus('Next day: writing immutable version 2026-06-12 …');
+    addObject('v2','versions/2026-06-12/data.csv', SNAP2+' rows','current');
+    await sleep(700);
+    setStatus('Consumer still reading 2026-06-11 — new version not published yet.','safe');
+    await sleep(800);
+    setStatus('Flipping _CURRENT → 2026-06-12 (atomic) …','safe');
+    document.querySelector('#ptr .tag').textContent = '→ 2026-06-12';
+    setRead(SNAP2,'ok');
+    await sleep(500);
+    setStatus('Consumer never dipped below a full dataset. That is the Full Loader. ✓','safe');
+    setBusy(false);
+  }
+
+  async function runNaive(){
+    if(busy) return; setBusy(true);
+    reset();
+    bucketLabel.textContent = 's3://silver-layer/devices/naive/';
+    setStatus('Live dataset present.');
+    addObject('live','current/data.csv', SNAP1+' rows','current');
+    setRead(SNAP1,'ok');
+    await sleep(900);
+    setStatus('Step 1 — DELETE live data …','danger');
+    removeObject('live');
+    await sleep(450);
+    setRead(0,'zero');
+    setStatus('⚠ Consumer reading right now sees 0 rows. Data has vanished.','danger');
+    await sleep(1300);
+    setStatus('Step 2 — write the new snapshot …');
+    addObject('live2','current/data.csv', SNAP2+' rows','current');
+    await sleep(650);
+    setRead(SNAP2,'ok');
+    setStatus('Recovered — but any read during the gap was wrong. This is the trap.','danger');
+    setBusy(false);
+  }
+
+  btnSafe.addEventListener('click', runSafe);
+  btnNaive.addEventListener('click', runNaive);
+  btnReset.addEventListener('click', ()=>{ if(!busy) reset(); });
+  reset();
+})();
+</script>
+</body>
+</html>
