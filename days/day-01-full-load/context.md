@@ -30,7 +30,13 @@ write-to-new-version then flip a single pointer object, never delete-then-write 
 - Real S3 already versions objects natively; we model versioning explicitly to make the mechanism
   visible. On real S3 you might lean on bucket versioning + a manifest instead.
 - Concurrency window is shown single-threaded for clarity; a real race needs two clients, but the
-  mechanism (empty live prefix between delete and write) is the same.
+  mechanism (empty live prefix between delete and write) is the same. **Why concurrency is
+  dangerous here:** two full loads running at once could flip `_CURRENT` to a version whose
+  `data.csv` is still being written by the other process, publishing a half-written snapshot. The
+  author's Airflow DAG prevents this with `max_active_runs=1`; a production S3 version would
+  serialize loads (a lock, a single-writer scheduler, or conditional puts).
+- `list_objects_v2` is not paginated in the code (it caps at 1000 keys/call). Flagged inline as a
+  demo-scale simplification; production needs a paginator.
 
 ## Next
 Day 02 — **Incremental Loader**: when a delta column *does* exist, stop reloading everything and

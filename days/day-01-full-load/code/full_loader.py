@@ -51,6 +51,8 @@ class NaiveFullLoader:
         self.live_key = f"{self.prefix}/current/data.csv"
 
     def _delete_live(self):
+        # NOTE: list_objects_v2 returns at most 1000 keys per call. Fine at demo scale; in
+        # production paginate (check IsTruncated / use a paginator) or you'll silently miss keys.
         listing = self.s3.list_objects_v2(Bucket=self.bucket, Prefix=f"{self.prefix}/current/")
         for obj in listing.get("Contents", []):
             self.s3.delete_object(Bucket=self.bucket, Key=obj["Key"])
@@ -112,6 +114,7 @@ class SafeVersionedFullLoader:
         return _count_csv_rows(obj["Body"].read())
 
     def list_versions(self) -> list[str]:
+        # Demo scale only — paginate in production (list_objects_v2 caps at 1000 keys per call).
         listing = self.s3.list_objects_v2(Bucket=self.bucket, Prefix=f"{self.prefix}/versions/")
         versions = set()
         for obj in listing.get("Contents", []):
