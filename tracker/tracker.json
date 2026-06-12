@@ -6,9 +6,12 @@
   "updated": "2026-06-12",
   "git": {
     "initialized": true,
-    "remote": null,
+    "remote": "https://github.com/DhanushAnegondi/Design_Patterns.git",
+    "branch": "master",
     "last_local_sha": null,
-    "pushes": []
+    "pushes": [
+      { "date": "2026-06-12", "branch": "master", "note": "initial push: scaffold + Day 01 + Day 02 (dockerized)" }
+    ]
   },
   "stats": {
     "total_concepts": 28,
@@ -16,11 +19,11 @@
     "building": 0,
     "verified": 0,
     "committed": 2,
-    "pushed": 0
+    "pushed": 2
   },
   "concepts": [
-    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "committed", "commit_sha": "1a33064", "verified_at": "2026-06-12", "pushed_at": null },
-    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "committed", "commit_sha": "c7dd37f", "verified_at": "2026-06-12", "pushed_at": null },
+    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "pushed", "commit_sha": "1a33064", "verified_at": "2026-06-12", "pushed_at": "2026-06-12" },
+    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "pushed", "commit_sha": "c7dd37f", "verified_at": "2026-06-12", "pushed_at": "2026-06-12" },
     { "day": null, "chapter": 2, "slug": "change-data-capture", "name": "Change Data Capture", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "passthrough-replicator", "name": "Passthrough Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "transformation-replicator", "name": "Transformation Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },

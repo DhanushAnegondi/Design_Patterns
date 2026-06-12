@@ -3,19 +3,20 @@
 > Auto-maintained by `/today_cron`. Machine source of truth is `tracker.json`.
 
 ## Status
-- Total concepts: 28 · Pushed: 0 · Committed: 2 · Verified: 0 · Building: 0
+- Total concepts: 28 · Pushed: 2 · Committed: 2 · Verified: 0 · Building: 0
+- Remote: https://github.com/DhanushAnegondi/Design_Patterns (branch: master)
 
 ## Git / push history
 | When | Concept | Commit | Pushed? |
 |------|---------|--------|---------|
-| 2026-06-12 | Full Loader | day01(full-load) | not yet |
-| 2026-06-12 | Incremental Loader | day02(incremental-load) | not yet |
+| 2026-06-12 | Full Loader | day01(full-load) | yes (master) |
+| 2026-06-12 | Incremental Loader | day02(incremental-load) | yes (master) |
 
 ## Concept ladder
 | Day | Ch | Concept | Status |
 |-----|----|---------|--------|
-| 1 | 2 | Full Loader | committed |
-| 2 | 2 | Incremental Loader | committed |
+| 1 | 2 | Full Loader | pushed |
+| 2 | 2 | Incremental Loader | pushed |
 | — | 2 | Change Data Capture | todo |
 | — | 2 | Passthrough Replicator | todo |
 | — | 2 | Transformation Replicator | todo |
