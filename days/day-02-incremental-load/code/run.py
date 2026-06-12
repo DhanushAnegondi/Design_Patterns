@@ -25,7 +25,10 @@ os.environ.setdefault("AWS_SESSION_TOKEN", "testing")
 os.environ.setdefault("AWS_REGION", REGION)
 
 CODE_DIR = Path(__file__).parent
-DATASET_DIR = (CODE_DIR / ".." / ".." / ".." / "datasets" / "incremental-load").resolve()
+# DATASET_DIR can be overridden (the Docker container mounts the dataset at /data).
+DATASET_DIR = Path(
+    os.environ.get("DATASET_DIR") or (CODE_DIR / ".." / ".." / ".." / "datasets" / "incremental-load")
+).resolve()
 
 sys.path.insert(0, str(CODE_DIR))
 from incremental_loader import IncrementalLoader, get_s3_client  # noqa: E402
@@ -44,8 +47,23 @@ def read_rows(name: str) -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def wait_for_s3(s3, retries=40, delay=1.5):
+    """When pointed at LocalStack/real S3, wait until the endpoint answers before we start."""
+    import time
+    for _ in range(retries):
+        try:
+            s3.list_buckets()
+            return
+        except Exception:
+            time.sleep(delay)
+    raise RuntimeError("S3 endpoint did not become ready in time")
+
+
 def demo():
     s3 = get_s3_client()
+    if os.environ.get("AWS_ENDPOINT_URL"):
+        print(f"  (waiting for S3 endpoint {os.environ['AWS_ENDPOINT_URL']} ...)")
+        wait_for_s3(s3)
     s3.create_bucket(Bucket=BUCKET)
 
     batch1 = read_rows("visits_batch_1.csv")   # 300, hour 09

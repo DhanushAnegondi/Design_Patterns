@@ -25,9 +25,11 @@ inherit a large model.
 
 ## 2. Build (parallel where independent)
 Spawn, each with its model set explicitly:
-- `concept-builder` (sonnet) → README.md, code/ (runnable `python run.py`), context.md,
-  .env.example, requirements.txt. Grounded in the chapter MD + author repo; web-search only to
-  confirm. S3 patterns use moto/LocalStack locally by default.
+- `concept-builder` (sonnet) → README.md (beginner-first, exhaustive), code/ (runnable),
+  context.md, .env.example, requirements.txt, AND `docker-compose.yml` + `Dockerfile` (PRIMARY run
+  path: LocalStack for S3 + a runner container; `docker compose up --build` must work end-to-end,
+  `docker compose down -v` after). Grounded in the chapter MD + author repo; web-search only to
+  confirm. No real cloud / no API limits — LocalStack locally.
 - `dataset-builder` (haiku) → `datasets/<slug>/` + DATASET.md (reproducible, right format).
 - After those return, `html-builder` (sonnet) → interactive `index.html`. It MUST use the
   impeccable skill and pass the detector: `npx impeccable detect days/day-NN-<slug>/index.html`.

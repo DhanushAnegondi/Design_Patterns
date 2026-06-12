@@ -10,7 +10,7 @@ gaps, unfaithful pattern implementation, and anything vague or wrong — because
 are terse and easy to get subtly wrong.
 
 ## What you check (against the harness checklist)
-1. **Fidelity to the book:** read the relevant chapter MD in `../Data Engineering Design Patterns/`.
+1. **Fidelity to the book:** read the relevant chapter MD in `book-corpus/chapters/`.
    Does the code actually implement the pattern's Problem/Solution/Consequences? Name any drift.
 2. **Fidelity to the author repo:** fetch the matching `chapter-NN` folder from
    `bartosz25/data-engineering-design-patterns-book`. Where does our version deviate? Is each

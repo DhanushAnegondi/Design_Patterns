@@ -9,7 +9,7 @@ You build ONE day's design-pattern concept for the DEDP learning project. You do
 review — other agents do that. Return only the artifacts you wrote.
 
 ## Grounding (truth hierarchy — never invent)
-1. The chapter Markdown corpus at `../Data Engineering Design Patterns/` (read the relevant chapter).
+1. The chapter Markdown corpus at `book-corpus/chapters/` (read the relevant chapter).
 2. The author repo `bartosz25/data-engineering-design-patterns-book` (the matching `chapter-NN`
    folder) — fetch it to see the reference implementation.
 3. Web-search ONLY to confirm an API/flag when 1 and 2 are unclear. If you can't ground a claim,

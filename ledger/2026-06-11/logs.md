@@ -1,5 +1,22 @@
 # Logs — 2026-06-11 (spans into 2026-06-12)
 
+## 2026-06-12 (session 2): consolidation + Docker pivot + push
+- User feedback: (1) the "failures" were impeccable detect exit-2 + PowerShell red stderr, not real
+  failures → run tools via Bash, interpret exit codes, don't surface walls of red (harness P-05).
+  (2) push to https://github.com/DhanushAnegondi/Design_Patterns.git, master branch, concept folders.
+  (3) move all DEDP files into the repo; leave nothing loose in the parent. (4) implement on Docker
+  like the author; thorough beginner READMEs per concept.
+- Copyright call: the book MD corpus + PDF are O'Reilly's IP. Repo is PUBLIC → book-corpus/ is
+  git-ignored (local-only grounding); only the learner's own work is pushed.
+- Consolidated: moved "Data Engineering Design Patterns/" + PDF + extract_output* into
+  dedp-learning/book-corpus/ (ignored); moved conversion .py scripts + old ledger into tools/.
+  Parent folder now free of loose DEDP files (other projects untouched). Fixed all corpus paths.
+- Docker: added Dockerfile + docker-compose.yml (LocalStack S3 + Python runner) to Day 1 + Day 2;
+  added DATASET_DIR env + wait-for-s3 to run.py. Verified BOTH with `docker compose up --build`
+  against LocalStack 3.8.1 → exit 0, all PASS; torn down with `down -v` (Docker stop rule).
+- Rewrote both day READMEs beginner-first + Docker-first (own words, no book text). Updated
+  CLAUDE.md / today_cron / checklist / patterns so Docker is the primary path for all future days.
+
 ## Session: build the DEDP daily-learning system + 2 days of content
 
 - Kickoff. User wants: textbook MD corpus → daily concept execution → GitHub commit/day.

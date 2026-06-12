@@ -28,3 +28,7 @@ Thumbs.db
 # Local S3 / docker volumes
 .localstack/
 volume/
+
+# Book corpus & PDF — copyrighted O'Reilly content, kept LOCAL ONLY for grounding.
+# Never publish. The learning artifacts (code, READMEs, datasets) are the learner's own work.
+book-corpus/

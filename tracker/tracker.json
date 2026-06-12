@@ -1,7 +1,7 @@
 {
   "project": "dedp-learning",
   "book": "Data Engineering Design Patterns — Bartosz Konieczny (O'Reilly, 2025)",
-  "corpus": "../Data Engineering Design Patterns/",
+  "corpus": "book-corpus/chapters/",
   "author_repo": "https://github.com/bartosz25/data-engineering-design-patterns-book",
   "updated": "2026-06-12",
   "git": {

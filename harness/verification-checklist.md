@@ -4,12 +4,14 @@ The verifier and reviewer run this every day. It grows when a new failure mode a
 silently shrinks. A day is "ready to commit" only when every MUST passes.
 
 ## Runs-on-any-device (verifier — MUST)
-- [ ] Fresh venv created from the day's `requirements.txt` only — no global deps assumed.
-- [ ] `python run.py` (or the documented command) executes end-to-end without error.
+- [ ] PRIMARY: `docker compose up --build --abort-on-container-exit` runs the day end-to-end
+      against LocalStack (real S3 API, no AWS account, no API limits) and the runner exits 0.
+- [ ] FALLBACK: the same code also runs with `python run.py` (moto, USE_MOTO=1), no global deps
+      beyond the day's `requirements.txt`.
 - [ ] It prints a verifiable result (row counts, file listing, assertion that PASSED).
-- [ ] No real AWS/cloud call by default — moto/LocalStack used; `.env.example` shows the real-AWS switch.
+- [ ] No real AWS/cloud call by default; `.env.example` shows the real-AWS switch.
 - [ ] No hardcoded absolute paths; no real secrets anywhere; `.env` is git-ignored.
-- [ ] If Docker used: stack is torn down (`docker compose down`) after the run.
+- [ ] Stack is torn down (`docker compose down -v`) after the run — never left running.
 
 ## Technical fidelity (reviewer — MUST)
 - [ ] Pattern implemented faithfully vs the chapter MD (Problem/Solution/Consequences hold).

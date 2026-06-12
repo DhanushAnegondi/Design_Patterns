@@ -19,7 +19,8 @@ This file OVERRIDES global rules where they conflict. Read it fully before actin
 
 ## Source of truth (grounding — non-negotiable)
 1. **Primary corpus:** the chapter Markdown files at
-   `../Data Engineering Design Patterns/` (00_INDEX.md + ch01–ch10). This is the book.
+   `book-corpus/chapters/` (00_INDEX.md + ch01–ch10). This is the book. NOTE: `book-corpus/` is
+   git-ignored — it is copyrighted O'Reilly content kept LOCAL ONLY for grounding, never published.
 2. **Reference implementation:** the author's repo
    `https://github.com/bartosz25/data-engineering-design-patterns-book` (chapter-NN folders).
    Use it to fill gaps where book snippets are vague — but build *our own* cleaner version.
@@ -40,16 +41,25 @@ Running `/today_cron` in this project:
      should be able to explain after, links to corpus + author ref, the ONE new idea it teaches
    - `.env.example` — every config the code needs, with safe local defaults (never real secrets)
    - `requirements.txt` — pinned deps for that day (reproducibility)
+   - `docker-compose.yml` + `Dockerfile` — the PRIMARY way to run the day: bring up the needed
+     services (LocalStack for S3, Postgres/Spark/Kafka when the pattern needs them) + a runner
+     container. `docker compose up --build --abort-on-container-exit` must run it end-to-end.
+   - `README.md` must be **beginner-first and exhaustive**: explain the concept like to a beginner,
+     define every term (S3, bucket, Docker, LocalStack, ...), give exact run + teardown commands,
+     walk the code, list consequences, and map to the book + author repo. Everything in the README.
 4. Wires the dataset under `datasets/<concept-slug>/` (see Datasets).
 5. Runs the agentic verification loop (below). Only a PASS is "ready to commit."
 6. Updates `tracker/tracker.json` + `tracker/tracker.md` and writes the suggested commit message.
 7. Does NOT push. The learner pushes. The tracker then records the push on the next run.
 
 ## Runs-on-any-device rule (hard)
-The verifier MUST be able to run the day's code on a clean machine with only Python + the day's
-`requirements.txt`. Therefore:
-- **No real cloud calls by default.** S3 patterns use **moto** (in-process mock) or **LocalStack**
-  (Docker) — the `.env.example` shows how to point at real AWS, but the default path is local.
+The day's code MUST run on a clean machine with no AWS account and no API limits. Two paths:
+- **PRIMARY — Docker.** `docker compose up --build` brings up **LocalStack** (a local, free S3 with
+  the real S3 API and no rate limits) plus a runner container. This mirrors how the book's author
+  ships every example (Docker) and is what we commit/push. Always `docker compose down -v` after.
+- **FALLBACK — pure Python.** The same code also runs with an in-process mock (`moto`, `USE_MOTO=1`)
+  for a quick check without Docker.
+- `.env.example` shows how to point at real AWS, but the default path is always local/free.
 - No hardcoded absolute paths. Use paths relative to the day folder or env vars.
 - No real credentials. Ever. `.env.example` only; `.env` is git-ignored.
 - A `run.py` or documented command must execute end-to-end and print a verifiable result.

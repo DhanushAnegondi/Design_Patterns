@@ -6,7 +6,7 @@ A daily hands-on learning system over the textbook *Data Engineering Design Patt
 dataset + clean commit. Goal: portfolio that proves the learner can re-implement any DE pattern.
 
 ## Grounding (truth hierarchy)
-1. Chapter MD corpus at `../Data Engineering Design Patterns/`
+1. Chapter MD corpus at `book-corpus/chapters/`
 2. Author repo `bartosz25/data-engineering-design-patterns-book`
 3. Web search only to confirm when 1 and 2 are unclear. Never invent.
 

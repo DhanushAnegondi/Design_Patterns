@@ -1,0 +1,33 @@
+# Day 02 — Incremental Loader on S3, fully in Docker.
+#
+#   localstack : a free, local stand-in for Amazon S3 (real S3 API, no AWS account, no cost).
+#   loader     : a small Python container that runs code/run.py against that S3.
+#
+# Run it:     docker compose up --build --abort-on-container-exit
+# Clean up:   docker compose down -v
+services:
+  localstack:
+    image: localstack/localstack:3
+    environment:
+      SERVICES: s3
+      DEBUG: "0"
+    ports:
+      - "4566:4566"
+
+  loader:
+    build: .
+    depends_on:
+      - localstack
+    environment:
+      USE_MOTO: "0"
+      AWS_ENDPOINT_URL: http://localstack:4566
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_REGION: us-east-1
+      S3_BUCKET: bronze-layer
+      DATASET_DIR: /data
+    volumes:
+      - ./code:/app/code:ro
+      - ../../datasets/incremental-load:/data:ro
+    working_dir: /app
+    command: ["python", "code/run.py"]

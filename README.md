@@ -25,7 +25,7 @@ ledger/          per-session work logs
 ```
 
 ## Source & reference
-- Book corpus (Markdown): `../Data Engineering Design Patterns/`
+- Book: *Data Engineering Design Patterns* (Bartosz Konieczny, O'Reilly 2025). The book text is **not** in this repo (copyright) — buy it from O'Reilly. I keep a local copy under `book-corpus/` (git-ignored) only for grounding.
 - Author's reference code: https://github.com/bartosz25/data-engineering-design-patterns-book
 - Implementations are my own clean versions, technically faithful to the book.
 
