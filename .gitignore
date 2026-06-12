@@ -1,0 +1,30 @@
+# Secrets & env
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.verify-venv/
+*.egg-info/
+
+# Node
+node_modules/
+
+# Large generated data (keep generators + small samples; ignore bulk)
+datasets/**/_generated/
+*.parquet
+*.delta/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local S3 / docker volumes
+.localstack/
+volume/

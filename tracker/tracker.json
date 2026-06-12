@@ -1,0 +1,51 @@
+{
+  "project": "dedp-learning",
+  "book": "Data Engineering Design Patterns — Bartosz Konieczny (O'Reilly, 2025)",
+  "corpus": "../Data Engineering Design Patterns/",
+  "author_repo": "https://github.com/bartosz25/data-engineering-design-patterns-book",
+  "updated": "2026-06-11",
+  "git": {
+    "initialized": false,
+    "remote": null,
+    "last_local_sha": null,
+    "pushes": []
+  },
+  "stats": {
+    "total_concepts": 28,
+    "todo": 28,
+    "building": 0,
+    "verified": 0,
+    "committed": 0,
+    "pushed": 0
+  },
+  "concepts": [
+    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 2, "slug": "change-data-capture", "name": "Change Data Capture", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 2, "slug": "passthrough-replicator", "name": "Passthrough Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 2, "slug": "transformation-replicator", "name": "Transformation Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 2, "slug": "compactor", "name": "Compactor", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 2, "slug": "readiness-marker", "name": "Readiness Marker", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 2, "slug": "external-trigger", "name": "External Trigger", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 3, "slug": "dead-letter", "name": "Dead-Letter", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 3, "slug": "retry", "name": "Retry", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 3, "slug": "windowed-deduplicator", "name": "Windowed Deduplicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 3, "slug": "late-data-integrator", "name": "Dynamic Late Data Integrator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 3, "slug": "checkpointer", "name": "Checkpointer", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 4, "slug": "fast-metadata-cleaner", "name": "Fast Metadata Cleaner", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 4, "slug": "data-overwrite", "name": "Data Overwrite", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 4, "slug": "merger", "name": "Merger", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 4, "slug": "stateful-merger", "name": "Stateful Merger", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 4, "slug": "keyed-idempotency", "name": "Keyed Idempotency", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 4, "slug": "transactional-writer", "name": "Transactional Writer", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 5, "slug": "static-joiner", "name": "Static Joiner", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 5, "slug": "dynamic-joiner", "name": "Dynamic Joiner", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 5, "slug": "distributed-aggregator", "name": "Distributed Aggregator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 5, "slug": "sessionizer", "name": "Stateful Sessionizer", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 6, "slug": "data-flow-orchestration", "name": "Data Flow / Orchestration", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 7, "slug": "data-security", "name": "Data Security (masking/encryption)", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 8, "slug": "data-storage-partitioning", "name": "Data Storage / Partitioning", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 9, "slug": "data-quality", "name": "Data Quality / Validation", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": null, "chapter": 10, "slug": "data-observability", "name": "Data Observability", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null }
+  ]
+}
