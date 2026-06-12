@@ -15,4 +15,12 @@ How to use the designated skills well. Agents that build frontend/visual content
 - Prefer skills with high install count / official source (Vercel, Anthropic) / GitHub stars.
 - Use when a day's concept needs a capability we don't already have a clean approach for.
 
-## (append learnings about these skills as we use them)
+## Learnings (2026-06-12, first use)
+- Windows: `npx impeccable skills install` fails on the `unzip` step (no unzip on Windows). The zip
+  IS downloaded to %TEMP%\impeccable-update-*.zip — extract it with PowerShell Expand-Archive and
+  copy the `.claude` subtree into the project. The CLI's `detect` command itself works fine.
+- The anti-slop gate is `npx impeccable@2.3.2 detect <file>` → exit 0 = clean, exit 2 = anti-patterns.
+  This is deterministic and runnable in Bash, so any agent can gate HTML with it regardless of
+  whether the `/impeccable` slash command is wired up.
+- Pin the version (`impeccable@2.3.2`) so npx doesn't re-resolve/hang.
+- Build HTML to avoid P-03 / P-04 on the first pass; expect 1-2 detect/fix cycles otherwise.

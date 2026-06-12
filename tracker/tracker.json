@@ -13,14 +13,14 @@
   "stats": {
     "total_concepts": 28,
     "todo": 26,
-    "building": 1,
-    "verified": 1,
-    "committed": 0,
+    "building": 0,
+    "verified": 0,
+    "committed": 2,
     "pushed": 0
   },
   "concepts": [
-    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "verified", "commit_sha": null, "verified_at": "2026-06-12", "pushed_at": null },
-    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "building", "commit_sha": null, "verified_at": null, "pushed_at": null },
+    { "day": 1, "chapter": 2, "slug": "full-load", "name": "Full Loader", "status": "committed", "commit_sha": "1a33064", "verified_at": "2026-06-12", "pushed_at": null },
+    { "day": 2, "chapter": 2, "slug": "incremental-load", "name": "Incremental Loader", "status": "committed", "commit_sha": null, "verified_at": "2026-06-12", "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "change-data-capture", "name": "Change Data Capture", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "passthrough-replicator", "name": "Passthrough Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
     { "day": null, "chapter": 2, "slug": "transformation-replicator", "name": "Transformation Replicator", "status": "todo", "commit_sha": null, "verified_at": null, "pushed_at": null },
